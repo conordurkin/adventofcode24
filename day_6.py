@@ -83,7 +83,7 @@ for i in range(rows):
                     escaped = True
                     break 
             if escaped == False:
-                options += 1
+                score += 1
                 break
 
 print("Part B: "+str(score))
