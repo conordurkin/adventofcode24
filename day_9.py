@@ -2,27 +2,27 @@
 with open("data/day9.txt") as f:
     data = [line.strip() for line in f]
 
-# # Part A solution
-# parsed_data = []
-# for index, value in enumerate(data[0]):
-#     if index % 2 == 0:
-#         parsed_data += [(index // 2)] * int(value)
-#     else:
-#         parsed_data += ['.'] * int(value) 
+# Part A solution
+parsed_data = []
+for index, value in enumerate(data[0]):
+    if index % 2 == 0:
+        parsed_data += [(index // 2)] * int(value)
+    else:
+        parsed_data += ['.'] * int(value) 
 
-# while '.' in parsed_data:
-#     last_entry = parsed_data.pop() 
-#     if last_entry == '.':
-#         continue 
-#     else: 
-#         first_period = parsed_data.index('.')
-#         parsed_data[first_period] = last_entry
+while '.' in parsed_data:
+    last_entry = parsed_data.pop() 
+    if last_entry == '.':
+        continue 
+    else: 
+        first_period = parsed_data.index('.')
+        parsed_data[first_period] = last_entry
 
-# result = 0 
-# for i, v in enumerate(parsed_data):
-#     result += int(v) * i 
+result = 0 
+for i, v in enumerate(parsed_data):
+    result += int(v) * i 
 
-# print("Part A Answer:", result) 
+print("Part A Answer:", result) 
 
 # Part B solution
 blocks = []
